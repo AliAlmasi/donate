@@ -10,6 +10,16 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	cursor: default;
+}
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+	.card {
+		background-color: red;
+	}
 }
 
 html {
@@ -41,7 +51,7 @@ a:hover {
 
 body {
 	font-size: 2.2rem;
-	width: 60vw;
+	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 	padding: 2rem 0;
@@ -80,8 +90,9 @@ p {
 	height: 100%;
 	background-color: #0f0f0f;
 	width: 40px;
-	left: 20px;
-	margin-right: 1.2rem;
+	left: 0;
+	border-top-left-radius: 1.4rem;
+	border-bottom-left-radius: 1.4rem;
 }
 
 .card:hover {
@@ -93,4 +104,20 @@ p {
 	display: flex;
 	flex-direction: column;
 	font-family: monospace;
+	align-self: flex-end;
+}
+
+.card-copy {
+	position: absolute;
+	bottom: 1rem;
+	font-size: 1.6rem;
+	border: 1px solid #0f0f0f;
+	border-radius: 0.4rem;
+	padding: 0.2rem 0.8rem;
+	transition: color 0.2s, background-color 0.2s;
+}
+
+.card-copy:hover {
+	color: #eceff4;
+	background-color: #0f0f0f;
 }
